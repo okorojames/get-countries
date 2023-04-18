@@ -13,8 +13,6 @@ const Header = () => {
         </Link>
         <div className="nav--links">
           <Link to="/">Home</Link>
-          <Link to="/about">About</Link>
-          <Link to="/services">Services</Link>
         </div>
       </nav>
       <div className="back--to--top" onClick={backToTop}>
