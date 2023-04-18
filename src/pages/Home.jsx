@@ -41,40 +41,65 @@ const Home = () => {
               <div className="country--image" style={{ marginBottom: "8px" }}>
                 <img src={country.flags.png} alt="" className="country--img" />
               </div>
-              <div
-                className="country--name"
-                style={{ alignSelf: "flex-start" }}
-              >
-                {country.name.common}
-              </div>
-              <div
-                className="country--region"
-                style={{ color: "#fff", alignSelf: "flex-start" }}
-              >
-                Region:{" "}
-                <span
-                  style={{ opacity: ".6", fontSize: "18px", marginLeft: "4px" }}
+              <div className="country--context">
+                <div className="country--name">{country.name.common}</div>
+                <div
+                  className="country--capital"
+                  style={{
+                    color: "#ffff",
+                  }}
                 >
-                  {country.region}
-                </span>
-              </div>
-              <div
-                className="country--borders"
-                style={{ color: "#fff", alignSelf: "flex-start" }}
-              >
-                Border / s:
-                {country.borders &&
-                  country.borders.map((border) => (
-                    <span
-                      style={{
-                        opacity: ".6",
-                        fontSize: "16px",
-                        marginLeft: "4px",
-                      }}
-                    >
-                      {`${border},`}
-                    </span>
-                  ))}
+                  Capital:
+                  <span
+                    style={{
+                      opacity: ".4",
+                      letterSpacing: "1.4px",
+                      marginLeft: "4px",
+                    }}
+                  >
+                    {country.capital}
+                  </span>
+                </div>
+                <div className="country--region" style={{ color: "#fff" }}>
+                  Region:{" "}
+                  <span
+                    style={{
+                      opacity: ".6",
+                      fontSize: "18px",
+                      marginLeft: "4px",
+                    }}
+                  >
+                    {country.region}
+                  </span>
+                </div>
+                <div className="country--continent" style={{ color: "#fff" }}>
+                  Continent:{" "}
+                  <span
+                    style={{
+                      opacity: ".6",
+                      fontSize: "18px",
+                      marginLeft: "4px",
+                    }}
+                  >
+                    {country.continents}
+                  </span>
+                </div>
+                <div className="country--borders" style={{ color: "#fff" }}>
+                  Border / s:
+                  {country.borders &&
+                    country.borders.map((border) => (
+                      <span
+                        className="country--border"
+                        style={{
+                          opacity: ".6",
+                          fontSize: "16px",
+                          marginLeft: "4px",
+                        }}
+                      >
+                        {`${border},`}
+                      </span>
+                    ))}
+                </div>
               </div>
             </Link>
           ))}

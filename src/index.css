@@ -90,13 +90,14 @@ nav {
   gap: 3rem;
 }
 .country {
+  max-width: 34rem;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 1.2rem;
-  box-shadow: 0 1.5px 12px rgba(11, 7, 25, 0.631);
+  box-shadow: 0 1.5px 14px rgba(15, 10, 34, 0.381);
   padding-bottom: 1.5rem;
   border-radius: 1rem;
 }
@@ -110,12 +111,22 @@ nav {
 .country--img {
   transition: 0.8s;
 }
-
+.country--context {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-self: flex-start;
+  padding: 1.2rem 2rem;
+}
 .country--name {
   font-size: 2rem;
   color: #ffff;
   text-transform: uppercase;
   letter-spacing: -1.2px;
+}
+.country--border {
+  word-break: break-all;
+  line-height: 1.2;
 }
 
 /*  */
