@@ -107,7 +107,9 @@ const About = () => {
                 }}
               >
                 {country.borders &&
-                  country.borders.map((border) => <span>{`${border},`}</span>)}
+                  country.borders.map((border, i) => (
+                    <span key={i}>{`${border},`}</span>
+                  ))}
               </div>
             </div>
             <div
