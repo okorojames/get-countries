@@ -37,10 +37,14 @@ const Home = () => {
       <div className="country--row">
         {countries &&
           countries.map((country, index) => (
-            <Link to={`/about/${country.name}`} className="country" key={index}>
-              <div className="country--image" style={{ marginBottom: "8px" }}>
-                <img src={country.flags.png} alt="" className="country--img" />
-              </div>
+            <Link
+              to={`/about/${country.name.common}`}
+              state={country}
+              className="country"
+              key={index}
+            >
+              <img src={country.flags.png} alt="" className="country--img" />
+
               <div className="country--context">
                 <div className="country--name">{country.name.common}</div>
                 <div
@@ -72,8 +76,9 @@ const Home = () => {
                     {country.region}
                   </span>
                 </div>
-                <div className="country--continent" style={{ color: "#fff" }}>
-                  Continent:{" "}
+
+                <div className="country--population" style={{ color: "#fff" }}>
+                  Population:
                   <span
                     style={{
                       opacity: ".6",
@@ -81,24 +86,8 @@ const Home = () => {
                       marginLeft: "4px",
                     }}
                   >
-                    {country.continents}
+                    {country.population}
                   </span>
-                </div>
-                <div className="country--borders" style={{ color: "#fff" }}>
-                  Border / s:
-                  {country.borders &&
-                    country.borders.map((border) => (
-                      <span
-                        className="country--border"
-                        style={{
-                          opacity: ".6",
-                          fontSize: "16px",
-                          marginLeft: "4px",
-                        }}
-                      >
-                        {`${border},`}
-                      </span>
-                    ))}
                 </div>
               </div>
             </Link>

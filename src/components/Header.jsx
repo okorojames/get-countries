@@ -15,7 +15,11 @@ const Header = () => {
           <Link to="/">Home</Link>
         </div>
       </nav>
-      <div className="back--to--top" onClick={backToTop}>
+      <div
+        className="back--to--top"
+        style={{ cursor: "pointer" }}
+        onClick={backToTop}
+      >
         &uarr;
       </div>
     </header>
