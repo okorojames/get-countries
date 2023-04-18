@@ -4,6 +4,7 @@ import About from "./pages/About";
 import Services from "./pages/Services";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import NoPage from "./pages/NoPage";
 
 function App() {
   return (
@@ -12,8 +13,9 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/about/:name" element={<About />} />
           <Route path="/404" element={<Services />} />
+          <Route path="/404:No-Page-Found" element={<NoPage />} />
         </Routes>
         <Footer />
       </div>

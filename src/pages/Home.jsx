@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link, Navigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useParams, useNavigate } from "react-router-dom";
 const Home = () => {
   const [search, setSearch] = useState();
@@ -37,7 +37,7 @@ const Home = () => {
       <div className="country--row">
         {countries &&
           countries.map((country, index) => (
-            <Link to="/about" className="country" key={index}>
+            <Link to={`/about/${country.name}`} className="country" key={index}>
               <div className="country--image" style={{ marginBottom: "8px" }}>
                 <img src={country.flags.png} alt="" className="country--img" />
               </div>
