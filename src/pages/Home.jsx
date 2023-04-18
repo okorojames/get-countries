@@ -9,7 +9,6 @@ const Home = () => {
     const res = await fetch(`https://restcountries.com/v3.1/name/${search}`);
     const data = await res.json();
     setCountries(data);
-    console.log(data);
     if (data.status === 404) {
       navigate("/404");
     }

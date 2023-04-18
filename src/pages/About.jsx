@@ -11,7 +11,6 @@ const About = () => {
     const res = await fetch(`https://restcountries.com/v3.1/name/${name}`);
     const data = await res.json();
     setCountry(data[0]);
-    console.log(data);
     if (data) {
       setIsLoading(false);
     }
