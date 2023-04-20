@@ -15,15 +15,17 @@ const Services = () => {
   };
   return (
     <div className="Ofour" style={oFourStyle}>
-      <h2
-        className="Ofour--header"
-        style={{ marginBottom: "20px", fontSize: "32px" }}
-      >
-        404 COUNTRY NOT FOUND
-      </h2>
-      <Link to="/" style={styleBtn}>
-        Okay
-      </Link>
+      <div className="Ofour--context">
+        <h2
+          className="Ofour--header"
+          style={{ marginBottom: "20px", fontSize: "32px" }}
+        >
+          404 COUNTRY NOT FOUND
+        </h2>
+        <Link to="/" style={styleBtn}>
+          Okay
+        </Link>
+      </div>
     </div>
   );
 };

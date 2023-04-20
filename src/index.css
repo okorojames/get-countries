@@ -29,11 +29,18 @@ body {
 .App {
   margin: 0 auto;
   width: 95%;
-  /*  */
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-  justify-content: space-between;
+}
+.home--section,
+.about--section,
+.Ofour,
+.no--page--section {
+  min-height: calc(100vh - 130px);
+}
+.Ofour--context {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 nav {
   padding: 18px 0;

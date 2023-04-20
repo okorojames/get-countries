@@ -14,7 +14,7 @@ const NoPage = () => {
     textAlign: "center",
   };
   return (
-    <div style={oFourStyle}>
+    <div className="no--page--section" style={oFourStyle}>
       <p style={{ marginBottom: "20px", fontSize: "32px" }}>No Page Found</p>
       <Link to="/" style={styleBtn}>
         Okay
